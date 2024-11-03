@@ -1,14 +1,20 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { BsCart3 } from "react-icons/bs";
 import { FiHeart } from "react-icons/fi";
 import Hero from "./Hero";
 
 export default function Navbar() {
+  const { pathname } = useLocation();
+
   return (
     <>
-      <div className="bg-[#f6f6f6] pt-4">
-        <div className="w-[97%] mx-auto bg-[#9538E2] pt-4 rounded-2xl">
+      <div className={`${pathname === "/" ? "bg-[#f6f6f6] pt-4" : "bg-white"}`}>
+        <div
+          className={`w-[97%] mx-auto ${
+            pathname === "/" ? "bg-[#9538E2] pt-4 rounded-t-2xl" : "bg-white"
+          }`}
+        >
           <div className="navbar w-[85%] mx-auto">
             <div className="navbar-start">
               <div className="dropdown">
@@ -55,14 +61,25 @@ export default function Navbar() {
                   </li>
                 </ul>
               </div>
-              <a className="text-md font-semibold text-white">Gadget Heaven</a>
+              <a
+                className={`text-md font-semibold ${
+                  pathname === "/" ? "text-white" : "text-black"
+                }`}
+              >
+                Gadget Heaven
+              </a>
             </div>
+
             <div className="navbar-center hidden lg:flex">
-              <ul className=" menu-horizontal px-1 text-xs gap-10 translate-y-0.5 text-white">
+              <ul
+                className={` menu-horizontal px-1 text-xs gap-10 translate-y-0.5 text-white`}
+              >
                 <li>
                   <NavLink
                     className={({ isActive }) =>
-                      `${isActive ? "underline font-semibold" : "font-light"}`
+                      `${isActive ? "underline font-semibold" : "font-light"} ${
+                        pathname === "/" ? "text-white" : "text-black"
+                      }`
                     }
                     to="/"
                   >
@@ -72,7 +89,9 @@ export default function Navbar() {
                 <li>
                   <NavLink
                     className={({ isActive }) =>
-                      `${isActive ? "underline font-semibold" : "font-light"}`
+                      `${isActive ? "underline font-semibold" : "font-light"} ${
+                        pathname === "/" ? "text-white" : "text-black"
+                      }`
                     }
                     to="/dashboard"
                   >
@@ -90,8 +109,6 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-  
-          <Hero></Hero>
         </div>
       </div>
     </>

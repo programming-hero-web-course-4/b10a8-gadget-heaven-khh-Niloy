@@ -6,6 +6,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./Root/Root.jsx";
 import Home from "./Pages/Home.jsx";
 import Dashboard from "./Pages/Dashboard.jsx";
+import CategoryTab from "./Components/CategoryTab.jsx";
+import SingleProduct from "./Components/SingleProduct.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +17,23 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => fetch("/category.json"),
+        children: [
+          {
+            path: "/",
+            element: <CategoryTab></CategoryTab>,
+            loader: () => fetch("/products.json"),
+          },
+          {
+            path: "/:categoryName",
+            element: <CategoryTab></CategoryTab>,
+            loader: () => fetch("/products.json"),
+          },
+        ],
+      },
+      {
+        path: "/p/:productId",
+        element: <SingleProduct></SingleProduct>,
       },
       {
         path: "/dashboard",

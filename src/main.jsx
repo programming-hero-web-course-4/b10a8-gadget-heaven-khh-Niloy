@@ -8,6 +8,8 @@ import Home from "./Pages/Home.jsx";
 import Dashboard from "./Pages/Dashboard.jsx";
 import CategoryTab from "./Components/CategoryTab.jsx";
 import SingleProduct from "./Components/SingleProduct.jsx";
+import Cart from "./Components/Cart.jsx";
+import Wishlist from "./Components/Wishlist.jsx";
 
 const router = createBrowserRouter([
   {
@@ -34,10 +36,25 @@ const router = createBrowserRouter([
       {
         path: "/p/:productId",
         element: <SingleProduct></SingleProduct>,
+        loader: () => fetch("/products.json"),
       },
       {
         path: "/dashboard",
         element: <Dashboard></Dashboard>,
+        children:[
+          {
+            path: "",
+            element: <Cart></Cart>,
+          },
+          {
+            path: "/dashboard/cart",
+            element: <Cart></Cart>,
+          },
+          {
+            path: "/dashboard/wishlist",
+            element: <Wishlist></Wishlist>,
+          },
+        ]
       },
     ],
   },

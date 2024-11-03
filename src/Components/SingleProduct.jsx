@@ -1,11 +1,24 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
+import React, { useContext } from "react";
+import { useLoaderData, useParams } from "react-router-dom";
+import UserContext from "./context/UserContext";
 
 export default function SingleProduct() {
-    const {productId } = useParams()
-    console.log(productId );
-    
+  const { productId } = useParams();
+  const data = useLoaderData();
+
+  const SingleProductData = data.find((e) => e.product_id === productId);
+
+  const {addToCart, setaddToCart} = useContext(UserContext)
+
   return (
-    <div className='w-full h-screen bg-red-500'>SingleProduct: {productId }</div>
-  )
+    <>
+      <div className="text-center">
+        <h1>{SingleProductData.product_title}</h1>
+        <button 
+          onClick={()=> setaddToCart([...addToCart, SingleProductData])}
+        className="btn btn-primary">Add to cart</button>
+        <button className="btn btn-primary">wishlist</button>
+      </div>
+    </>
+  );
 }

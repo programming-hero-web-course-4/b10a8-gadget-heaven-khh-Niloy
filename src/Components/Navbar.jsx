@@ -6,7 +6,6 @@ import Hero from "./Hero";
 
 export default function Navbar() {
   const { pathname } = useLocation();
-  console.log(pathname);
 
   return (
     <>

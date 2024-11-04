@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useLoaderData, useNavigate, useParams } from "react-router-dom";
 
 export default function CategoryTab() {
-  const  categoryName  = useParams();
+  const  {categoryName}  = useParams();
   const data = useLoaderData();
   const [products, setproducts] = useState([]);
   const navigate = useNavigate();

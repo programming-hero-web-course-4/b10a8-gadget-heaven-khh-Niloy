@@ -1,6 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import UserContext from "./context/UserContext";
+import { BsCart3 } from "react-icons/bs";
+import { FiHeart } from "react-icons/fi";
+import ReactStars from "react-rating-stars-component";
+import { IoStarSharp } from "react-icons/io5";
 
 export default function SingleProduct() {
   const { productId } = useParams();
@@ -10,6 +14,11 @@ export default function SingleProduct() {
 
   const { addToCart, setaddToCart, addToWishlist, setaddToWishlist } =
     useContext(UserContext);
+
+  const [rating, setRating] = useState(SingleProductData.rating);
+  const ratingChanged = (newRating) => {
+    setRating(newRating);
+  };
 
   return (
     <>
@@ -22,9 +31,9 @@ export default function SingleProduct() {
         </p>
       </div>
 
-      <div className="flex flex-col items-center justify-center py-32 bg-[#f6f6f6] relative">
-        <div className="absolute bg-white p-5 rounded-xl flex -top-32 w-[80%] gap-5">
-          <div className="w-[30%]">
+      <div className="flex flex-col items-center justify-center py-44 bg-[#f6f6f6] relative">
+        <div className="absolute bg-white p-4 rounded-xl flex -top-28 w-[80%] gap-5">
+          <div className="w-[36%]">
             <img
               src={SingleProductData.product_image}
               className="border border-black/10 rounded-xl object-cover w-full hover:scale-105 hover:transition"
@@ -33,35 +42,67 @@ export default function SingleProduct() {
           </div>
 
           <div className="w-[60%]">
-            <h1>{SingleProductData.product_title}</h1>
-            <p className="text-[#09080F]/60">
+            <h1 className="text-lg font-semibold">
+              {SingleProductData.product_title}
+            </h1>
+            <p className="text-[#09080F]/90 my-1 text-sm font-semibold">
               Price: {SingleProductData.price}$
             </p>
-            <p className="text-[#09080F]/60">
-              {SingleProductData.availability ? "in Stock" : "Out of Stock"}
+            <span
+              className="text-[#309C08] font-normal text-xs p-1 px-3 rounded-full border 
+            border-[#309C08] bg-[#309C08]/10"
+            >
+              {SingleProductData.availability ? "In Stock" : "Out of Stock"}
+            </span>
+            <p className="text-[#09080F]/60 text-sm my-2">
+              {SingleProductData.description}
             </p>
-            <p className="text-[#09080F]/60">{SingleProductData.description}</p>
-            <p className="text-[#09080F]/60">Specification:</p>
+            <p className="text-[#09080F] font-semibold text-sm mb-2">
+              Specification:
+            </p>
 
             {SingleProductData.specification.map((e) => (
-              <li>{e}</li>
+              <li className="list-decimal text-xs mb-1.5 text-black/60">{e}</li>
             ))}
 
-            <button
-              onClick={() => setaddToCart([...addToCart, SingleProductData])}
-              className="btn btn-primary"
-            >
-              Add to cart
-            </button>
+            <div>
+              <div className="flex items-center gap-1 text-sm mt-2">
+                <h2 className="font-semibold">Rating</h2>
+                <IoStarSharp className="mb-0.5 text-[#F9C004] text-[16px]"></IoStarSharp>
+              </div>
 
-            <button
-              onClick={() =>
-                setaddToWishlist([...addToWishlist, SingleProductData])
-              }
-              className="btn btn-primary"
-            >
-              wishlist
-            </button>
+              <div className="flex items-center gap-2 mb-2">
+                <ReactStars
+                  count={5}
+                  value={rating}
+                  onChange={ratingChanged}
+                  size={24}
+                  isHalf={true}
+                  activeColor="#F9C004"
+                  color="#949494"
+                />
+                <p className="text-xs bg-[#09080F]/5 px-2 py-1 rounded-full text-[11px]">{rating}</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => setaddToCart([...addToCart, SingleProductData])}
+                className="bg-[#9538E2] text-white text-xs font-medium px-4 py-2 rounded-full flex items-center"
+              >
+                Add to cart <BsCart3 className="ml-2"></BsCart3>
+              </button>
+
+              <button
+                onClick={() =>
+                  setaddToWishlist([...addToWishlist, SingleProductData])
+                }
+                className="border border-black/15 p-2 
+                rounded-full hover:bg-[#9538E2] hover:text-white duration-300"
+              >
+                <FiHeart className="text-sm"></FiHeart>
+              </button>
+            </div>
           </div>
         </div>
       </div>

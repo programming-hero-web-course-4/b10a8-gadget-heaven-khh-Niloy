@@ -15,13 +15,13 @@ export default function Navbar() {
       <div
         className={`${
           pathname === "/" ||
-          pathname === "/all-product" ||
-          pathname === "/laptops" ||
-          pathname === "/phones" ||
-          pathname === "/accessories" ||
-          pathname === "/smart-watches" ||
-          pathname === "/macbook" ||
-          pathname === "/iphone"
+          pathname === "/home/all-product" ||
+          pathname === "/home/laptops" ||
+          pathname === "/home/phones" ||
+          pathname === "/home/accessories" ||
+          pathname === "/home/smart-watches" ||
+          pathname === "/home/macbook" ||
+          pathname === "/home/iphone"
             ? "bg-[#f6f6f6] pt-4"
             : "bg-white"
         }`}
@@ -29,13 +29,13 @@ export default function Navbar() {
         <div
           className={`w-[97%] mx-auto ${
             pathname === "/" ||
-            pathname === "/all-product" ||
-            pathname === "/laptops" ||
-            pathname === "/phones" ||
-            pathname === "/accessories" ||
-            pathname === "/smart-watches" ||
-            pathname === "/macbook" ||
-            pathname === "/iphone"
+            pathname === "/home/all-product" ||
+            pathname === "/home/laptops" ||
+            pathname === "/home/phones" ||
+            pathname === "/home/accessories" ||
+            pathname === "/home/smart-watches" ||
+            pathname === "/home/macbook" ||
+            pathname === "/home/iphone"
               ? "bg-[#9538E2] pt-4 rounded-t-2xl"
               : "bg-white"
           }`}
@@ -89,13 +89,13 @@ export default function Navbar() {
               <a
                 className={`text-md font-semibold ${
                   pathname === "/" ||
-                  pathname === "/all-product" ||
-                  pathname === "/laptops" ||
-                  pathname === "/phones" ||
-                  pathname === "/accessories" ||
-                  pathname === "/smart-watches" ||
-                  pathname === "/macbook" ||
-                  pathname === "/iphone"
+                  pathname === "/home/all-product" ||
+                  pathname === "/home/laptops" ||
+                  pathname === "/home/phones" ||
+                  pathname === "/home/accessories" ||
+                  pathname === "/home/smart-watches" ||
+                  pathname === "/home/macbook" ||
+                  pathname === "/home/iphone"
                     ? "text-white"
                     : "text-black"
                 }`}
@@ -113,13 +113,13 @@ export default function Navbar() {
                     className={({ isActive }) =>
                       `${isActive ? "underline font-semibold" : "font-light"} ${
                         pathname === "/" ||
-                        pathname === "/all-product" ||
-                        pathname === "/laptops" ||
-                        pathname === "/phones" ||
-                        pathname === "/accessories" ||
-                        pathname === "/smart-watches" ||
-                        pathname === "/macbook" ||
-                        pathname === "/iphone"
+                        pathname === "/home/all-product" ||
+                        pathname === "/home/laptops" ||
+                        pathname === "/home/phones" ||
+                        pathname === "/home/accessories" ||
+                        pathname === "/home/smart-watches" ||
+                        pathname === "/home/macbook" ||
+                        pathname === "/home/iphone"
                           ? "text-white"
                           : "text-black"
                       }`
@@ -134,13 +134,13 @@ export default function Navbar() {
                     className={({ isActive }) =>
                       `${isActive ? "underline font-semibold" : "font-light"} ${
                         pathname === "/" ||
-                        pathname === "/all-product" ||
-                        pathname === "/laptops" ||
-                        pathname === "/phones" ||
-                        pathname === "/accessories" ||
-                        pathname === "/smart-watches" ||
-                        pathname === "/macbook" ||
-                        pathname === "/iphone"
+                        pathname === "/home/all-product" ||
+                        pathname === "/home/laptops" ||
+                        pathname === "/home/phones" ||
+                        pathname === "/home/accessories" ||
+                        pathname === "/home/smart-watches" ||
+                        pathname === "/home/macbook" ||
+                        pathname === "/home/iphone"
                           ? "text-white"
                           : "text-black"
                       }`
@@ -156,13 +156,13 @@ export default function Navbar() {
               <div
                 className={`${
                   pathname === "/" ||
-                  pathname === "/all-product" ||
-                  pathname === "/laptops" ||
-                  pathname === "/phones" ||
-                  pathname === "/accessories" ||
-                  pathname === "/smart-watches" ||
-                  pathname === "/macbook" ||
-                  pathname === "/iphone"
+                  pathname === "/home/all-product" ||
+                  pathname === "/home/laptops" ||
+                  pathname === "/home/phones" ||
+                  pathname === "/home/accessories" ||
+                  pathname === "/home/smart-watches" ||
+                  pathname === "/home/macbook" ||
+                  pathname === "/home/iphone"
                     ? "bg-white text-black p-2 text-xs rounded-full"
                     : "text-black bg-white border border-black/15 p-2 text-xs rounded-full"
                 } relative`}
@@ -171,25 +171,25 @@ export default function Navbar() {
                 <h1
                   className={`${
                     pathname === "/" ||
-                    pathname === "/all-product" ||
-                    pathname === "/laptops" ||
-                    pathname === "/phones" ||
-                    pathname === "/accessories" ||
-                    pathname === "/smart-watches" ||
-                    pathname === "/macbook" ||
-                    pathname === "/iphone"
+                    pathname === "/home/all-product" ||
+                    pathname === "/home/laptops" ||
+                    pathname === "/home/phones" ||
+                    pathname === "/home/accessories" ||
+                    pathname === "/home/smart-watches" ||
+                    pathname === "/home/macbook" ||
+                    pathname === "/home/iphone"
                       ? "absolute -top-[7px] -right-1 bg-[#9538E2] border border-white rounded-full px-1 text-[8px] text-white font-medium"
                       : "absolute -top-[7px] -right-1 bg-[#9538E2] rounded-full px-1 text-[8px] text-white font-medium"
                   }`}
                 >
                   {pathname === "/" ||
-                  pathname === "/all-product" ||
-                  pathname === "/laptops" ||
-                  pathname === "/phones" ||
-                  pathname === "/accessories" ||
-                  pathname === "/smart-watches" ||
-                  pathname === "/macbook" ||
-                  pathname === "/iphone"
+                  pathname === "/home/all-product" ||
+                  pathname === "/home/laptops" ||
+                  pathname === "/home/phones" ||
+                  pathname === "/home/accessories" ||
+                  pathname === "/home/smart-watches" ||
+                  pathname === "/home/macbook" ||
+                  pathname === "/home/iphone"
                     ? `${addToCart.length}`
                     : `${addToCart.length}`}
                 </h1>
@@ -197,13 +197,13 @@ export default function Navbar() {
               <div
                 className={`${
                   pathname === "/" ||
-                  pathname === "/all-product" ||
-                  pathname === "/laptops" ||
-                  pathname === "/phones" ||
-                  pathname === "/accessories" ||
-                  pathname === "/smart-watches" ||
-                  pathname === "/macbook" ||
-                  pathname === "/iphone"
+                  pathname === "/home/all-product" ||
+                  pathname === "/home/laptops" ||
+                  pathname === "/home/phones" ||
+                  pathname === "/home/accessories" ||
+                  pathname === "/home/smart-watches" ||
+                  pathname === "/home/macbook" ||
+                  pathname === "/home/iphone"
                     ? "bg-white text-black p-2 text-xs rounded-full"
                     : "text-black bg-white border border-black/15 p-2 text-xs rounded-full"
                 } relative`}
@@ -212,25 +212,25 @@ export default function Navbar() {
                 <h1
                   className={`${
                     pathname === "/" ||
-                    pathname === "/all-product" ||
-                    pathname === "/laptops" ||
-                    pathname === "/phones" ||
-                    pathname === "/accessories" ||
-                    pathname === "/smart-watches" ||
-                    pathname === "/macbook" ||
-                    pathname === "/iphone"
+                    pathname === "/home/all-product" ||
+                    pathname === "/home/laptops" ||
+                    pathname === "/home/phones" ||
+                    pathname === "/home/accessories" ||
+                    pathname === "/home/smart-watches" ||
+                    pathname === "/home/macbook" ||
+                    pathname === "/home/iphone"
                       ? "absolute -top-[7px] -right-1 bg-[#9538E2] border border-white rounded-full px-1 text-[8px] text-white font-medium"
                       : "absolute -top-[7px] -right-1 bg-[#9538E2] rounded-full px-1 text-[8px] text-white font-medium"
                   }`}
                 >
                   {pathname === "/" ||
-                  pathname === "/all-product" ||
-                  pathname === "/laptops" ||
-                  pathname === "/phones" ||
-                  pathname === "/accessories" ||
-                  pathname === "/smart-watches" ||
-                  pathname === "/macbook" ||
-                  pathname === "/iphone"
+                  pathname === "/ahome/ll-product" ||
+                  pathname === "/home/laptops" ||
+                  pathname === "/home/phones" ||
+                  pathname === "/home/accessories" ||
+                  pathname === "/home/smart-watches" ||
+                  pathname === "/home/macbook" ||
+                  pathname === "/home/iphone"
                     ? `${addToWishlist.length}`
                     : `${addToWishlist.length}`}
                 </h1>

@@ -10,11 +10,13 @@ import CategoryTab from "./Components/CategoryTab.jsx";
 import SingleProduct from "./Components/SingleProduct.jsx";
 import Cart from "./Components/Cart.jsx";
 import Wishlist from "./Components/Wishlist.jsx";
+import ErrorPage from "./Components/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -27,7 +29,7 @@ const router = createBrowserRouter([
             loader: () => fetch("/products.json"),
           },
           {
-            path: "/:categoryName",
+            path: "/home/:categoryName",
             element: <CategoryTab></CategoryTab>,
             loader: () => fetch("/products.json"),
           },
@@ -57,7 +59,7 @@ const router = createBrowserRouter([
         ]
       },
     ],
-  },
+  },,
 ]);
 
 createRoot(document.getElementById("root")).render(

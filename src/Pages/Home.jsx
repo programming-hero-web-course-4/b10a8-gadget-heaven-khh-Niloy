@@ -21,7 +21,7 @@ export default function Home() {
                 <div className="flex flex-col bg-white p-5 gap-5 rounded-xl border border-black/10">
                   {CategoryData.map((e, index) => (
                     <NavLink
-                      to={`/${e.slug}`}
+                      to={`/home/${e.slug}`}
                       key={index}
                       className={({ isActive }) =>
                         `${

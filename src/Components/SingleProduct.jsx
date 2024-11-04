@@ -8,7 +8,7 @@ export default function SingleProduct() {
 
   const SingleProductData = data.find((e) => e.product_id === productId);
 
-  const {addToCart, setaddToCart} = useContext(UserContext)
+  const {addToCart, setaddToCart, addToWishlist, setaddToWishlist} = useContext(UserContext)
 
   return (
     <>
@@ -17,7 +17,11 @@ export default function SingleProduct() {
         <button 
           onClick={()=> setaddToCart([...addToCart, SingleProductData])}
         className="btn btn-primary">Add to cart</button>
-        <button className="btn btn-primary">wishlist</button>
+
+
+        <button 
+          onClick={()=> setaddToWishlist([...addToWishlist, SingleProductData])}
+          className="btn btn-primary">wishlist</button>
       </div>
     </>
   );

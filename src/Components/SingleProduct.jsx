@@ -23,7 +23,7 @@ export default function SingleProduct() {
   return (
     <>
       <div className="text-center bg-[#9538E2] pt-8 pb-32">
-        <h1 className="text-white font-semibold text-xl">Product Details</h1>
+        <h1 className="text-white font-semibold text-2xl">Product Details</h1>
         <p className="text-white text-xs font-light leading-[1.5] my-3">
           Explore the latest gadgets that will take your experience to the next
           level. From smart devices to <br /> the coolest accessories, we have

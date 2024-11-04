@@ -26,7 +26,7 @@ export default function Home() {
                         `${
                           isActive
                             ? "bg-[#9538E2] text-white font-semibold"
-                            : "bg-[#09080F]/5 text-[#09080F]/65"
+                            : "bg-[#09080F]/5 text-[#09080F]/65 "
                         } p-3 text-xs rounded-full`
                       }
                     >

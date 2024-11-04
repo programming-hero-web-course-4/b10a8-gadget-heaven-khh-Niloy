@@ -21,17 +21,22 @@ export default function CategoryTab() {
       <div className="grid grid-cols-3 gap-5">
         {products.map((e, index) => ((
           <div className="card card-compact bg-base-100">
-          <figure>
+          <div className="w-full">
             <img
-              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+              src={e.product_image}
               alt="Shoes"
+              className=" h-[11rem] w-full object-cover rounded-2xl"
             />
-          </figure>
+          </div>
           <div className="card-body">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
+            <h2 className="text-md">{e.product_title}</h2>
+            <p>{e.price}$</p>
+            <div className="card-actions">
+              <Link to={`/p/${e.product_id}`}>
+                <button className="border border-[#9538E2] py-1.5 px-3 text-xs rounded-full">
+                  <span className="text-[#9538E2]">View Details</span>
+                  </button>
+              </Link>
             </div>
           </div>
         </div>

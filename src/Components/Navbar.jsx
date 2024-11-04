@@ -6,13 +6,36 @@ import Hero from "./Hero";
 
 export default function Navbar() {
   const { pathname } = useLocation();
+  console.log(pathname);
 
   return (
     <>
-      <div className={`${pathname === "/" ? "bg-[#f6f6f6] pt-4" : "bg-white"}`}>
+      <div
+        className={`${
+          pathname === "/" ||
+          pathname === "/all-product" ||
+          pathname === "/laptops" ||
+          pathname === "/phones" ||
+          pathname === "/accessories" ||
+          pathname === "/smart-watches" ||
+          pathname === "/macbook" ||
+          pathname === "/iphone"
+            ? "bg-[#f6f6f6] pt-4"
+            : "bg-white"
+        }`}
+      >
         <div
           className={`w-[97%] mx-auto ${
-            pathname === "/" ? "bg-[#9538E2] pt-4 rounded-t-2xl" : "bg-white"
+            pathname === "/" ||
+            pathname === "/all-product" ||
+            pathname === "/laptops" ||
+            pathname === "/phones" ||
+            pathname === "/accessories" ||
+            pathname === "/smart-watches" ||
+            pathname === "/macbook" ||
+            pathname === "/iphone"
+              ? "bg-[#9538E2] pt-4 rounded-t-2xl"
+              : "bg-white"
           }`}
         >
           <div className="navbar w-[85%] mx-auto">
@@ -63,7 +86,16 @@ export default function Navbar() {
               </div>
               <a
                 className={`text-md font-semibold ${
-                  pathname === "/" ? "text-white" : "text-black"
+                  pathname === "/" ||
+                  pathname === "/all-product" ||
+                  pathname === "/laptops" ||
+                  pathname === "/phones" ||
+                  pathname === "/accessories" ||
+                  pathname === "/smart-watches" ||
+                  pathname === "/macbook" ||
+                  pathname === "/iphone"
+                    ? "text-white"
+                    : "text-black"
                 }`}
               >
                 Gadget Heaven
@@ -78,7 +110,16 @@ export default function Navbar() {
                   <NavLink
                     className={({ isActive }) =>
                       `${isActive ? "underline font-semibold" : "font-light"} ${
-                        pathname === "/" ? "text-white" : "text-black"
+                        pathname === "/" ||
+                        pathname === "/all-product" ||
+                        pathname === "/laptops" ||
+                        pathname === "/phones" ||
+                        pathname === "/accessories" ||
+                        pathname === "/smart-watches" ||
+                        pathname === "/macbook" ||
+                        pathname === "/iphone"
+                          ? "text-white"
+                          : "text-black"
                       }`
                     }
                     to="/"
@@ -90,7 +131,16 @@ export default function Navbar() {
                   <NavLink
                     className={({ isActive }) =>
                       `${isActive ? "underline font-semibold" : "font-light"} ${
-                        pathname === "/" ? "text-white" : "text-black"
+                        pathname === "/" ||
+                        pathname === "/all-product" ||
+                        pathname === "/laptops" ||
+                        pathname === "/phones" ||
+                        pathname === "/accessories" ||
+                        pathname === "/smart-watches" ||
+                        pathname === "/macbook" ||
+                        pathname === "/iphone"
+                          ? "text-white"
+                          : "text-black"
                       }`
                     }
                     to="/dashboard"

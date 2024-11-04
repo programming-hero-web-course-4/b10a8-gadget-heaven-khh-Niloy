@@ -23,11 +23,11 @@ export default function Cart() {
 
               <div className="flex justify-between w-full">
                 <div className="flex flex-col gap-1.5">
-                  <h1 className="text-lg font-semibold">{e.product_title}</h1>
+                  <h1 className="text-md font-semibold">{e.product_title}</h1>
                   <p className="text-[#09080F]/60 text-sm">
                     {e.description}
                   </p>
-                  <h1 className="text-md font-semibold">Price: ${e.price}</h1>
+                  <h1 className="text-sm font-semibold">Price: ${e.price}</h1>
                 </div>
                 <div>
                   <RxCross2 className="mr-10 border border-[red] text-[red] text-2xl p-1 rounded-full

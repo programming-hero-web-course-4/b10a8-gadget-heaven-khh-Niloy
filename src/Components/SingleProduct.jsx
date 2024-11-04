@@ -5,6 +5,8 @@ import { BsCart3 } from "react-icons/bs";
 import { FiHeart } from "react-icons/fi";
 import ReactStars from "react-rating-stars-component";
 import { IoStarSharp } from "react-icons/io5";
+import { ToastContainer, toast, Bounce } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function SingleProduct() {
   const { productId } = useParams();
@@ -81,22 +83,65 @@ export default function SingleProduct() {
                   activeColor="#F9C004"
                   color="#949494"
                 />
-                <p className="text-xs bg-[#09080F]/5 px-2 py-1 rounded-full text-[11px]">{rating}</p>
+                <p className="text-xs bg-[#09080F]/5 px-2 py-1 rounded-full text-[11px]">
+                  {rating}
+                </p>
               </div>
             </div>
 
             <div className="flex items-center gap-3">
               <button
-                onClick={() => setaddToCart([...addToCart, SingleProductData])}
+                onClick={() => {
+                  setaddToCart([...addToCart, SingleProductData]);
+                  toast.success("Added to cart", {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    transition: Bounce,
+                  });
+                }}
                 className="bg-[#9538E2] text-white text-xs font-medium px-4 py-2 rounded-full flex items-center"
               >
                 Add to cart <BsCart3 className="ml-2"></BsCart3>
               </button>
 
               <button
-                onClick={() =>
-                  setaddToWishlist([...addToWishlist, SingleProductData])
-                }
+                onClick={() => {
+                  const isExist = addToWishlist.find(
+                    (e) => e.product_id === SingleProductData.product_id
+                  );
+                  if (isExist) {
+                    toast.warn("Alreay Added to wishlist!", {
+                      position: "top-center",
+                      autoClose: 2000,
+                      hideProgressBar: false,
+                      closeOnClick: true,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                      theme: "light",
+                      transition: Bounce,
+                    });
+                  } else {
+                    setaddToWishlist([...addToWishlist, SingleProductData]);
+                    toast.success("Added to wishlist", {
+                      position: "top-center",
+                      autoClose: 2000,
+                      hideProgressBar: false,
+                      closeOnClick: true,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                      theme: "light",
+                      transition: Bounce,
+                    });
+                  }
+                }}
                 className="border border-black/15 p-2 
                 rounded-full hover:bg-[#9538E2] hover:text-white duration-300"
               >
@@ -106,6 +151,7 @@ export default function SingleProduct() {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 }

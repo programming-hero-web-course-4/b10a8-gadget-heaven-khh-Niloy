@@ -25,16 +25,16 @@ export default function CategoryTab() {
             <img
               src={e.product_image}
               alt="Shoes"
-              className=" h-[11rem] w-full object-cover rounded-2xl"
+              className=" h-[11rem] w-full object-cover rounded-2xl mt-3"
             />
           </div>
           <div className="card-body">
-            <h2 className="text-md">{e.product_title}</h2>
-            <p>{e.price}$</p>
+            <h2 className="text-[15px] font-semibold mt-3">{e.product_title}</h2>
+            <p className="text-[#09080F]/60">Price: {e.price}$</p>
             <div className="card-actions">
               <Link to={`/p/${e.product_id}`}>
-                <button className="border border-[#9538E2] py-1.5 px-3 text-xs rounded-full">
-                  <span className="text-[#9538E2]">View Details</span>
+                <button className="border-[1.35px] border-[#9538E2] py-2 px-3 text-xs rounded-full">
+                  <span className="text-[#9538E2] font-semibold">View Details</span>
                   </button>
               </Link>
             </div>

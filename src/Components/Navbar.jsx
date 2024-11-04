@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { BsCart3 } from "react-icons/bs";
 import { FiHeart } from "react-icons/fi";
 import Hero from "./Hero";
+import UserContext from "./context/UserContext";
 
 export default function Navbar() {
   const { pathname } = useLocation();
+  const { addToWishlist, setaddToWishlist, addToCart, setaddToCart } =
+    useContext(UserContext);
 
   return (
     <>
@@ -150,11 +153,87 @@ export default function Navbar() {
               </ul>
             </div>
             <div className="navbar-end gap-3">
-              <div className="bg-white text-black p-2 text-xs rounded-full">
-                <BsCart3></BsCart3>
+              <div
+                className={`${
+                  pathname === "/" ||
+                  pathname === "/all-product" ||
+                  pathname === "/laptops" ||
+                  pathname === "/phones" ||
+                  pathname === "/accessories" ||
+                  pathname === "/smart-watches" ||
+                  pathname === "/macbook" ||
+                  pathname === "/iphone"
+                    ? "bg-white text-black p-2 text-xs rounded-full"
+                    : "text-black bg-white border border-black/15 p-2 text-xs rounded-full"
+                } relative`}
+              >
+                <BsCart3 className=""></BsCart3>
+                <h1
+                  className={`${
+                    pathname === "/" ||
+                    pathname === "/all-product" ||
+                    pathname === "/laptops" ||
+                    pathname === "/phones" ||
+                    pathname === "/accessories" ||
+                    pathname === "/smart-watches" ||
+                    pathname === "/macbook" ||
+                    pathname === "/iphone"
+                      ? "absolute -top-[7px] -right-1 bg-[#9538E2] border border-white rounded-full px-1 text-[8px] text-white font-medium"
+                      : "absolute -top-[7px] -right-1 bg-[#9538E2] rounded-full px-1 text-[8px] text-white font-medium"
+                  }`}
+                >
+                  {pathname === "/" ||
+                  pathname === "/all-product" ||
+                  pathname === "/laptops" ||
+                  pathname === "/phones" ||
+                  pathname === "/accessories" ||
+                  pathname === "/smart-watches" ||
+                  pathname === "/macbook" ||
+                  pathname === "/iphone"
+                    ? `${addToCart.length}`
+                    : `${addToCart.length}`}
+                </h1>
               </div>
-              <div className="bg-white text-black p-2 text-xs rounded-full">
+              <div
+                className={`${
+                  pathname === "/" ||
+                  pathname === "/all-product" ||
+                  pathname === "/laptops" ||
+                  pathname === "/phones" ||
+                  pathname === "/accessories" ||
+                  pathname === "/smart-watches" ||
+                  pathname === "/macbook" ||
+                  pathname === "/iphone"
+                    ? "bg-white text-black p-2 text-xs rounded-full"
+                    : "text-black bg-white border border-black/15 p-2 text-xs rounded-full"
+                } relative`}
+              >
                 <FiHeart></FiHeart>
+                <h1
+                  className={`${
+                    pathname === "/" ||
+                    pathname === "/all-product" ||
+                    pathname === "/laptops" ||
+                    pathname === "/phones" ||
+                    pathname === "/accessories" ||
+                    pathname === "/smart-watches" ||
+                    pathname === "/macbook" ||
+                    pathname === "/iphone"
+                      ? "absolute -top-[7px] -right-1 bg-[#9538E2] border border-white rounded-full px-1 text-[8px] text-white font-medium"
+                      : "absolute -top-[7px] -right-1 bg-[#9538E2] rounded-full px-1 text-[8px] text-white font-medium"
+                  }`}
+                >
+                  {pathname === "/" ||
+                  pathname === "/all-product" ||
+                  pathname === "/laptops" ||
+                  pathname === "/phones" ||
+                  pathname === "/accessories" ||
+                  pathname === "/smart-watches" ||
+                  pathname === "/macbook" ||
+                  pathname === "/iphone"
+                    ? `${addToWishlist.length}`
+                    : `${addToWishlist.length}`}
+                </h1>
               </div>
             </div>
           </div>

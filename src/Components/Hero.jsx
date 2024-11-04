@@ -1,5 +1,6 @@
 import React from "react";
 import banner from "../assets/banner.jpg";
+import { NavLink } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -14,9 +15,11 @@ export default function Hero() {
           it all!
         </p>
 
-        <button className="my-5 px-5 py-2 bg-white text-[#9538E2] rounded-full text-sm font-bold">
-          Shop Now
-        </button>
+        <NavLink to="/dashboard">
+          <button className="my-5 px-5 py-2 bg-white text-[#9538E2] rounded-full text-sm font-bold">
+            Shop Now
+          </button>
+        </NavLink>
         <div className="mx-auto w-[54%] absolute top-56 bg-white/30 p-3 rounded-2xl border-2 border-white mt-7">
           <img
             className="w-full h-[19rem] object-cover rounded-xl"

@@ -68,21 +68,96 @@ export default function Navbar() {
                   className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
                 >
                   <li>
-                    <a>Item 1</a>
+                    <NavLink
+                      className={({ isActive }) =>
+                        `${
+                          isActive ? "underline font-semibold" : "font-light"
+                        } ${
+                          pathname === "/" ||
+                          pathname === "/home/all-product" ||
+                          pathname === "/home/laptops" ||
+                          pathname === "/home/phones" ||
+                          pathname === "/home/accessories" ||
+                          pathname === "/home/smart-watches" ||
+                          pathname === "/home/macbook" ||
+                          pathname === "/home/iphone"
+                            ? "text-white"
+                            : "text-black"
+                        }`
+                      }
+                      to="/"
+                    >
+                      Home
+                    </NavLink>
                   </li>
                   <li>
-                    <a>Parent</a>
-                    <ul className="p-2">
-                      <li>
-                        <a>Submenu 1</a>
-                      </li>
-                      <li>
-                        <a>Submenu 2</a>
-                      </li>
-                    </ul>
+                    <NavLink
+                      className={({ isActive }) =>
+                        `${
+                          isActive ? "underline font-semibold" : "font-light"
+                        } ${
+                          pathname === "/" ||
+                          pathname === "/home/all-product" ||
+                          pathname === "/home/laptops" ||
+                          pathname === "/home/phones" ||
+                          pathname === "/home/accessories" ||
+                          pathname === "/home/smart-watches" ||
+                          pathname === "/home/macbook" ||
+                          pathname === "/home/iphone"
+                            ? "text-white"
+                            : "text-black"
+                        }`
+                      }
+                      to="/dashboard"
+                    >
+                      Dashboard
+                    </NavLink>
                   </li>
                   <li>
-                    <a>Item 3</a>
+                    <NavLink
+                      className={({ isActive }) =>
+                        `${
+                          isActive ? "underline font-semibold" : "font-light"
+                        } ${
+                          pathname === "/" ||
+                          pathname === "/home/all-product" ||
+                          pathname === "/home/laptops" ||
+                          pathname === "/home/phones" ||
+                          pathname === "/home/accessories" ||
+                          pathname === "/home/smart-watches" ||
+                          pathname === "/home/macbook" ||
+                          pathname === "/home/iphone"
+                            ? "text-white"
+                            : "text-black"
+                        }`
+                      }
+                      to="/stats"
+                    >
+                      Stats
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      className={({ isActive }) =>
+                        `${
+                          isActive ? "underline font-semibold" : "font-light"
+                        } ${
+                          pathname === "/" ||
+                          pathname === "/home/all-product" ||
+                          pathname === "/home/laptops" ||
+                          pathname === "/home/phones" ||
+                          pathname === "/home/accessories" ||
+                          pathname === "/home/smart-watches" ||
+                          pathname === "/home/macbook" ||
+                          pathname === "/home/iphone"
+                            ? "text-white"
+                            : "text-black"
+                        }`
+                      }
+                      to="/feedback"
+                    >
+                      FeedBack
+                    </NavLink>
                   </li>
                 </ul>
               </div>

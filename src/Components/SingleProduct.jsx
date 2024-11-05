@@ -85,6 +85,7 @@ export default function SingleProduct() {
                   isHalf={true}
                   activeColor="#F9C004"
                   color="#949494"
+                  edit={false}
                 />
                 <p className="text-xs bg-[#09080F]/5 px-2 py-1 rounded-full text-[11px]">
                   {rating}

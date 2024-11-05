@@ -1,10 +1,16 @@
-import React from "react";
-import { Link, NavLink, Outlet, useLoaderData, useParams } from "react-router-dom";
+import React, { useContext } from "react";
+import {
+  Link,
+  NavLink,
+  Outlet,
+  useLoaderData,
+  useParams,
+} from "react-router-dom";
 import Hero from "../Components/Hero";
 
 export default function Home() {
   const CategoryData = useLoaderData();
-  
+
   return (
     <>
       <div className=" bg-[#f6f6f6]">

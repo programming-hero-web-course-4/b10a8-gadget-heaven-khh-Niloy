@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useLoaderData, useNavigate, useParams } from "react-router-dom";
+import UserContext from "./context/UserContext";
 
 export default function CategoryTab() {
   const  {categoryName}  = useParams();
   const data = useLoaderData();
   const [products, setproducts] = useState([]);
   const navigate = useNavigate();
-  
 
   useEffect(() => {
     const filterCategory = [...data].filter((e) => e.category === categoryName);
@@ -21,7 +21,7 @@ export default function CategoryTab() {
     <div>
       <div className="grid grid-cols-3 gap-5">
         {products.map((e, index) => ((
-          <div className="card card-compact bg-base-100">
+          <div key={index} className="card card-compact bg-base-100">
           <div className="w-full">
             <img
               src={e.product_image}

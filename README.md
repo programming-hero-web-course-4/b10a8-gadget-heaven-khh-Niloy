@@ -8,7 +8,7 @@ Gadget Heaven is a user-friendly web application that showcases a curated select
 
 ## Documentation
 
-[Requirement Document Link](./ReqFile.pdf)
+[Requirement Document Link](https://github.com/programming-hero-web-course-4/b10a8-gadget-heaven-khh-Niloy/blob/main/ReqFile.pdf)
 
 ## React Fundamental Concepts Used
 

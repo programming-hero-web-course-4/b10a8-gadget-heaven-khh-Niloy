@@ -1,21 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 
 export default function FeedBack() {
+  const [message, setmessage] = useState("");
+  const [message2, setmessage2] = useState("");
+  const [probList, setprobList] = useState([]);
+
+  const newProblem = {
+    type: message,
+    detailes: message2,
+  };
+
   function handleSubmit() {
     const showingModal = document.getElementById("my_modal_1");
     if (showingModal && message != "" && message2 != "") {
       showingModal.showModal();
     }
-  }
 
-  const [message, setmessage] = useState("");
-  const [message2, setmessage2] = useState("");
+    setprobList((prev) => [...prev, newProblem]);
+    // console.log(probList);
+  }
 
   return (
     <>
       <Helmet>
-        <title>FeedBack - Gadget Heaven</title>
+        <title>Report - Gadget Heaven</title>
       </Helmet>
       <div className="text-center mt-5">
         <h1 className="text-2xl font-semibold">We Value Your Feedback!</h1>
@@ -28,11 +37,14 @@ export default function FeedBack() {
         <div className="bg-[#f6f6f6] p-5 rounded-2xl text-black font-semibold py-5">
           <h1 className="text-lg">Problem type:</h1>
           <textarea
-            className="resize-none p-2 text-black font-normal border border-black/10 rounded-md focus:outline-none my-2"
+            className="resize-none p-1 text-black font-normal border border-black/10 rounded-md focus:outline-none my-2"
             name=""
             id=""
             value={message}
-            onChange={(e) => setmessage(e.target.value)}
+            onChange={(e) => {
+              // handleOnChange(e)
+              setmessage(e.target.value);
+            }}
             cols="50"
             rows="1"
           ></textarea>
@@ -42,9 +54,12 @@ export default function FeedBack() {
             name=""
             id=""
             value={message2}
-            onChange={(e) => setmessage2(e.target.value)}
+            onChange={(e) => {
+              // handleOnChange2(e)
+              setmessage2(e.target.value);
+            }}
             cols="30"
-            rows="10"
+            rows="5"
           ></textarea>
 
           <button
@@ -53,6 +68,20 @@ export default function FeedBack() {
           >
             Submit
           </button>
+        </div>
+      </div>
+          
+      <div className="w-[80%] mx-auto mt-14">
+        <h1 className="text-xl font-semibold mb-5">Problem List: </h1>
+        <div className="grid grid-cols-1 gap-5">
+          {
+            probList.map((e)=>(
+              <div className="border border-black/10 p-3 rounded-xl">
+                <h1><span className="font-semibold">Problem type: </span>{e.type}</h1>
+                <p className="my-2"><span className="font-semibold">Detailes: </span>:{e.detailes}</p>
+              </div>
+            ))
+          }
         </div>
       </div>
 

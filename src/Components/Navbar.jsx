@@ -156,7 +156,7 @@ export default function Navbar() {
                       }
                       to="/feedback"
                     >
-                      FeedBack
+                      Report
                     </NavLink>
                   </li>
                 </ul>
@@ -264,7 +264,7 @@ export default function Navbar() {
                     }
                     to="/feedback"
                   >
-                    FeedBack
+                    Report
                   </NavLink>
                 </li>
               </ul>

@@ -21,7 +21,8 @@ export default function Navbar() {
           pathname === "/home/accessories" ||
           pathname === "/home/smart-watches" ||
           pathname === "/home/macbook" ||
-          pathname === "/home/iphone"
+          pathname === "/home/iphone" ||
+          pathname === "/home/tablets"
             ? "bg-[#f6f6f6] pt-4"
             : "bg-white"
         }`}
@@ -35,7 +36,8 @@ export default function Navbar() {
             pathname === "/home/accessories" ||
             pathname === "/home/smart-watches" ||
             pathname === "/home/macbook" ||
-            pathname === "/home/iphone"
+            pathname === "/home/iphone" ||
+            pathname === "/home/tablets"
               ? "bg-[#9538E2] pt-4 rounded-t-2xl"
               : "bg-white"
           }`}
@@ -80,7 +82,8 @@ export default function Navbar() {
                           pathname === "/home/accessories" ||
                           pathname === "/home/smart-watches" ||
                           pathname === "/home/macbook" ||
-                          pathname === "/home/iphone"
+                          pathname === "/home/iphone" ||
+                          pathname === "/home/tablets"
                             ? "text-white"
                             : "text-black"
                         }`
@@ -103,7 +106,8 @@ export default function Navbar() {
                           pathname === "/home/accessories" ||
                           pathname === "/home/smart-watches" ||
                           pathname === "/home/macbook" ||
-                          pathname === "/home/iphone"
+                          pathname === "/home/iphone" ||
+                          pathname === "/home/tablets"
                             ? "text-white"
                             : "text-black"
                         }`
@@ -126,7 +130,8 @@ export default function Navbar() {
                           pathname === "/home/accessories" ||
                           pathname === "/home/smart-watches" ||
                           pathname === "/home/macbook" ||
-                          pathname === "/home/iphone"
+                          pathname === "/home/iphone" ||
+                          pathname === "/home/tablets"
                             ? "text-white"
                             : "text-black"
                         }`
@@ -149,7 +154,8 @@ export default function Navbar() {
                           pathname === "/home/accessories" ||
                           pathname === "/home/smart-watches" ||
                           pathname === "/home/macbook" ||
-                          pathname === "/home/iphone"
+                          pathname === "/home/iphone" ||
+                          pathname === "/home/tablets"
                             ? "text-white"
                             : "text-black"
                         }`
@@ -170,7 +176,8 @@ export default function Navbar() {
                   pathname === "/home/accessories" ||
                   pathname === "/home/smart-watches" ||
                   pathname === "/home/macbook" ||
-                  pathname === "/home/iphone"
+                  pathname === "/home/iphone" ||
+                  pathname === "/home/tablets"
                     ? "text-white"
                     : "text-black"
                 }`}
@@ -194,7 +201,8 @@ export default function Navbar() {
                         pathname === "/home/accessories" ||
                         pathname === "/home/smart-watches" ||
                         pathname === "/home/macbook" ||
-                        pathname === "/home/iphone"
+                        pathname === "/home/iphone" ||
+                        pathname === "/home/tablets"
                           ? "text-white"
                           : "text-black"
                       }`
@@ -215,7 +223,8 @@ export default function Navbar() {
                         pathname === "/home/accessories" ||
                         pathname === "/home/smart-watches" ||
                         pathname === "/home/macbook" ||
-                        pathname === "/home/iphone"
+                        pathname === "/home/iphone" ||
+                        pathname === "/home/tablets"
                           ? "text-white"
                           : "text-black"
                       }`
@@ -236,7 +245,8 @@ export default function Navbar() {
                         pathname === "/home/accessories" ||
                         pathname === "/home/smart-watches" ||
                         pathname === "/home/macbook" ||
-                        pathname === "/home/iphone"
+                        pathname === "/home/iphone" ||
+                        pathname === "/home/tablets"
                           ? "text-white"
                           : "text-black"
                       }`
@@ -257,7 +267,8 @@ export default function Navbar() {
                         pathname === "/home/accessories" ||
                         pathname === "/home/smart-watches" ||
                         pathname === "/home/macbook" ||
-                        pathname === "/home/iphone"
+                        pathname === "/home/iphone" ||
+                        pathname === "/home/tablets"
                           ? "text-white"
                           : "text-black"
                       }`
@@ -279,7 +290,8 @@ export default function Navbar() {
                   pathname === "/home/accessories" ||
                   pathname === "/home/smart-watches" ||
                   pathname === "/home/macbook" ||
-                  pathname === "/home/iphone"
+                  pathname === "/home/iphone" ||
+                  pathname === "/home/tablets"
                     ? "bg-white text-black p-2 text-xs rounded-full"
                     : "text-black bg-white border border-black/15 p-2 text-xs rounded-full"
                 } relative`}
@@ -294,7 +306,8 @@ export default function Navbar() {
                     pathname === "/home/accessories" ||
                     pathname === "/home/smart-watches" ||
                     pathname === "/home/macbook" ||
-                    pathname === "/home/iphone"
+                    pathname === "/home/iphone" ||
+                    pathname === "/home/tablets"
                       ? "absolute -top-[7px] -right-1 bg-[#9538E2] border border-white rounded-full px-1 text-[8px] text-white font-medium"
                       : "absolute -top-[7px] -right-1 bg-[#9538E2] rounded-full px-1 text-[8px] text-white font-medium"
                   }`}
@@ -306,7 +319,8 @@ export default function Navbar() {
                   pathname === "/home/accessories" ||
                   pathname === "/home/smart-watches" ||
                   pathname === "/home/macbook" ||
-                  pathname === "/home/iphone"
+                  pathname === "/home/iphone" ||
+                  pathname === "/home/tablets"
                     ? `${addToCart.length}`
                     : `${addToCart.length}`}
                 </h1>
@@ -320,7 +334,8 @@ export default function Navbar() {
                   pathname === "/home/accessories" ||
                   pathname === "/home/smart-watches" ||
                   pathname === "/home/macbook" ||
-                  pathname === "/home/iphone"
+                  pathname === "/home/iphone" ||
+                  pathname === "/home/tablets"
                     ? "bg-white text-black p-2 text-xs rounded-full"
                     : "text-black bg-white border border-black/15 p-2 text-xs rounded-full"
                 } relative`}
@@ -335,19 +350,21 @@ export default function Navbar() {
                     pathname === "/home/accessories" ||
                     pathname === "/home/smart-watches" ||
                     pathname === "/home/macbook" ||
-                    pathname === "/home/iphone"
+                    pathname === "/home/iphone" ||
+                    pathname === "/home/tablets"
                       ? "absolute -top-[7px] -right-1 bg-[#9538E2] border border-white rounded-full px-1 text-[8px] text-white font-medium"
                       : "absolute -top-[7px] -right-1 bg-[#9538E2] rounded-full px-1 text-[8px] text-white font-medium"
                   }`}
                 >
                   {pathname === "/" ||
-                  pathname === "/ahome/ll-product" ||
+                  pathname === "/home/all-product" ||
                   pathname === "/home/laptops" ||
                   pathname === "/home/phones" ||
                   pathname === "/home/accessories" ||
                   pathname === "/home/smart-watches" ||
                   pathname === "/home/macbook" ||
-                  pathname === "/home/iphone"
+                  pathname === "/home/iphone" ||
+                  pathname === "/home/tablets"
                     ? `${addToWishlist.length}`
                     : `${addToWishlist.length}`}
                 </h1>

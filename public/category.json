@@ -33,5 +33,10 @@
       "id": 7,
       "name": "iPhone",
       "slug": "iphone"
+    },
+    {
+      "id": 8,
+      "name": "Tablets",
+      "slug": "tablets"
     }
   ]

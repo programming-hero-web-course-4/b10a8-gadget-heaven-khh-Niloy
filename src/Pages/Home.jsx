@@ -7,12 +7,16 @@ import {
   useParams,
 } from "react-router-dom";
 import Hero from "../Components/Hero";
+import { Helmet } from "react-helmet-async";
 
 export default function Home() {
   const CategoryData = useLoaderData();
 
   return (
     <>
+      <Helmet>
+        <title>Home - Gadget Heaven</title>
+      </Helmet>
       <div className=" bg-[#f6f6f6]">
         <div className="mx-auto">
           <Hero></Hero>

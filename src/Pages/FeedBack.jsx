@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 export default function FeedBack() {
   function handleSubmit() {
@@ -13,6 +14,9 @@ export default function FeedBack() {
 
   return (
     <>
+      <Helmet>
+        <title>FeedBack - Gadget Heaven</title>
+      </Helmet>
       <div className="text-center mt-5">
         <h1 className="text-2xl font-semibold">We Value Your Feedback!</h1>
         <p className="text-sm font-light mt-2">

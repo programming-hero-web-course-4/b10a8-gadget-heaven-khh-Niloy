@@ -1,5 +1,6 @@
 // In your Dashboard component
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 
 export default function Dashboard() {
@@ -7,11 +8,15 @@ export default function Dashboard() {
 
   return (
     <>
+      <Helmet>
+        <title>Dashboard - Gadget Heaven</title>
+      </Helmet>
       <div className="text-center bg-[#9538E2] pt-8 pb-6">
         <h1 className="text-white font-semibold text-2xl">Dashboard</h1>
         <p className="text-white text-xs font-light leading-[1.5] my-3">
-        Explore the latest gadgets that will take your experience to the next level. From smart devices to 
-        <br /> the coolest accessories, we have it all!
+          Explore the latest gadgets that will take your experience to the next
+          level. From smart devices to
+          <br /> the coolest accessories, we have it all!
         </p>
 
         <div className="flex items-center justify-center gap-4 mt-6">

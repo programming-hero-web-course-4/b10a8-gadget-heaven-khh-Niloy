@@ -13,6 +13,7 @@ import Wishlist from "./Components/Wishlist.jsx";
 import ErrorPage from "./Components/ErrorPage.jsx";
 import Statistics from "./Pages/Statistics.jsx";
 import FeedBack from "./Pages/FeedBack.jsx";
+import { HelmetProvider } from "react-helmet-async";
 
 const router = createBrowserRouter([
   {
@@ -45,7 +46,7 @@ const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashboard></Dashboard>,
-        children:[
+        children: [
           {
             path: "",
             element: <Cart></Cart>,
@@ -58,7 +59,7 @@ const router = createBrowserRouter([
             path: "/dashboard/wishlist",
             element: <Wishlist></Wishlist>,
           },
-        ]
+        ],
       },
       {
         path: "/stats",
@@ -69,11 +70,14 @@ const router = createBrowserRouter([
         element: <FeedBack></FeedBack>,
       },
     ],
-  },,
+  },
+  ,
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
   </StrictMode>
 );

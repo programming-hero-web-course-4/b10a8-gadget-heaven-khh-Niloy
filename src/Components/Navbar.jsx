@@ -150,6 +150,27 @@ export default function Navbar() {
                     Dashboard
                   </NavLink>
                 </li>
+                <li>
+                  <NavLink
+                    className={({ isActive }) =>
+                      `${isActive ? "underline font-semibold" : "font-light"} ${
+                        pathname === "/" ||
+                        pathname === "/home/all-product" ||
+                        pathname === "/home/laptops" ||
+                        pathname === "/home/phones" ||
+                        pathname === "/home/accessories" ||
+                        pathname === "/home/smart-watches" ||
+                        pathname === "/home/macbook" ||
+                        pathname === "/home/iphone"
+                          ? "text-white"
+                          : "text-black"
+                      }`
+                    }
+                    to="/stats"
+                  >
+                    Stats
+                  </NavLink>
+                </li>
               </ul>
             </div>
             <div className="navbar-end gap-3">

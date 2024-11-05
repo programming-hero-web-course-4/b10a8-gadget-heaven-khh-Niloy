@@ -11,6 +11,7 @@ import SingleProduct from "./Components/SingleProduct.jsx";
 import Cart from "./Components/Cart.jsx";
 import Wishlist from "./Components/Wishlist.jsx";
 import ErrorPage from "./Components/ErrorPage.jsx";
+import Statistics from "./Pages/Statistics.jsx";
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,11 @@ const router = createBrowserRouter([
             element: <Wishlist></Wishlist>,
           },
         ]
+      },
+      {
+        path: "/stats",
+        element: <Statistics></Statistics>,
+        // loader: () => fetch("/products.json"),
       },
     ],
   },,

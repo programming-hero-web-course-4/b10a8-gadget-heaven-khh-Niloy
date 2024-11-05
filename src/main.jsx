@@ -12,6 +12,7 @@ import Cart from "./Components/Cart.jsx";
 import Wishlist from "./Components/Wishlist.jsx";
 import ErrorPage from "./Components/ErrorPage.jsx";
 import Statistics from "./Pages/Statistics.jsx";
+import FeedBack from "./Pages/FeedBack.jsx";
 
 const router = createBrowserRouter([
   {
@@ -62,7 +63,10 @@ const router = createBrowserRouter([
       {
         path: "/stats",
         element: <Statistics></Statistics>,
-        // loader: () => fetch("/products.json"),
+      },
+      {
+        path: "/feedback",
+        element: <FeedBack></FeedBack>,
       },
     ],
   },,

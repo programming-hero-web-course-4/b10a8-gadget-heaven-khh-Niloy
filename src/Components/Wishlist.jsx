@@ -6,7 +6,7 @@ import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function Wishlist() {
-  const { addToWishlist, setaddToWishlist, addToCart, setaddToCart } =
+  const { addToWishlist, setaddToWishlist, addToCart, setaddToCart, money, setmoney } =
     useContext(UserContext);
 
   return (
@@ -39,6 +39,7 @@ export default function Wishlist() {
                       <button
                         onClick={() => {
                           setaddToCart([...addToCart, e]);
+                          setmoney(e.price + money)
                           toast.success("Added to cart!", {
                             position: "top-center",
                             autoClose: 2000,

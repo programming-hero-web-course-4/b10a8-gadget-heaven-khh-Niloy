@@ -14,7 +14,7 @@ export default function SingleProduct() {
 
   const SingleProductData = data.find((e) => e.product_id === productId);
 
-  const { addToCart, setaddToCart, addToWishlist, setaddToWishlist } =
+  const { addToCart, setaddToCart, addToWishlist, setaddToWishlist, money, setmoney } =
     useContext(UserContext);
 
   const [rating, setRating] = useState(SingleProductData.rating);
@@ -96,6 +96,7 @@ export default function SingleProduct() {
               <button
                 onClick={() => {
                   setaddToCart([...addToCart, SingleProductData]);
+                  setmoney(SingleProductData.price + money)
                   toast.success("Added to cart", {
                     position: "top-center",
                     autoClose: 2000,

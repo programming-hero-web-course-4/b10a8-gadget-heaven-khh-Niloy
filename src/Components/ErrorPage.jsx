@@ -10,7 +10,7 @@ export default function ErrorPage() {
         </div>
         <div className="w-full lg:w-1/2">
           <h1 className="py-4 text-3xl lg:text-4xl font-extrabold text-gray-800">
-            "Oops 😢 The page you are looking for is not available."
+            "We're sorry 😢 for the inconvenience! back to our homepage."
           </h1>
           <p className="py-4 text-base text-gray-800">
             The content you’re looking for doesn’t exist. Either it was removed,

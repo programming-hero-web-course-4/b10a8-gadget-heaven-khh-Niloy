@@ -1,10 +1,36 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import UserContext from "./context/UserContext";
 import { RxCross2 } from "react-icons/rx";
 import { PiSortDescending } from "react-icons/pi";
+import { RiVerifiedBadgeFill } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 
 export default function Cart() {
   const { addToCart, setaddToCart, money, setmoney } = useContext(UserContext);
+  const [purchaseDisabled, setpurchaseDisabled] = useState(false);
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (addToCart.length == 0) {
+      setpurchaseDisabled(true);
+    } else {
+      setpurchaseDisabled(false);
+    }
+  }, [addToCart]);
+
+  function handlePruchase() {
+    const showingModal = document.getElementById("my_modal_1");
+    if (showingModal) {
+      showingModal.showModal();
+    }
+  }
+
+  function handleCloseBtn(){
+    addToCart.length = 0
+    setmoney(0)
+    setpurchaseDisabled(true);
+    navigate("/")
+  }
 
   return (
     <div className="bg-[#f6f6f6] border">
@@ -12,11 +38,15 @@ export default function Cart() {
         <div className="flex items-center justify-between">
           <h1 className="font-bold text-xl">Cart</h1>
           <div className="flex items-center gap-3">
-            <h1 className="font-semibold mr-2 translate-y-0.5">Total cost: $ {money}</h1>
+            <h1 className="font-semibold mr-2 translate-y-0.5">
+              Total cost: $ {money}
+            </h1>
             <button
-              onClick={()=>{
-                const sorted = [...addToCart].sort(function(a, b){return b.price - a.price});
-                setaddToCart(sorted)
+              onClick={() => {
+                const sorted = [...addToCart].sort(function (a, b) {
+                  return b.price - a.price;
+                });
+                setaddToCart(sorted);
               }}
               className="bg-transparent border-[1.4px] border-[#9538E2] font-semibold px-3 py-1.5 
             rounded-full text-xs text-[#9538E2] flex items-center gap-2"
@@ -24,9 +54,18 @@ export default function Cart() {
               Sort by Price{" "}
               <PiSortDescending className="text-lg font-semibold"></PiSortDescending>{" "}
             </button>
+
             <button
-              className="bg-gradient-to-b from-[#862eda] via-[#a33de4] to-[#e464e4] border-[1.4px] text-white font-normal px-5 py-2
-            rounded-full text-xs"
+              disabled={purchaseDisabled}
+              onClick={() => {
+                handlePruchase();
+              }}
+              className={`${
+                purchaseDisabled
+                  ? "bg-black/5 text-black/25"
+                  : "bg-gradient-to-b from-[#862eda] via-[#a33de4] to-[#e464e4] text-white"
+              } font-normal px-5 py-2
+            rounded-full text-xs`}
             >
               Purchase
             </button>
@@ -67,6 +106,26 @@ export default function Cart() {
           ))}
         </div>
       </div>
+      <dialog id="my_modal_1" className="modal">
+        <div className="modal-box flex flex-col items-center justify-center">
+          <RiVerifiedBadgeFill className="text-6xl text-[#3EB655]"></RiVerifiedBadgeFill>
+          <h3 className="font-bold text-xl mt-3">Payment Successfully</h3>
+          <div className="border border-black/5 w-[90%] my-3"></div>
+          <p className="">Thanks for purchasing.</p>
+          <p className="mt-2">Total: ${money}</p>
+          <div className="modal-action w-full">
+            <form method="dialog" className="w-full">
+              <button 
+              onClick={()=>{
+                handleCloseBtn()
+              }}
+              className="py-2 rounded-full font-medium hover:bg-red-600 hover:text-white duration-300 bg-[#110000]/5 w-full">
+                Close
+              </button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </div>
   );
 }

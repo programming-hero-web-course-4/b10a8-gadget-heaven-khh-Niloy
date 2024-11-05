@@ -15,8 +15,8 @@ export default function FeedBack() {
     const showingModal = document.getElementById("my_modal_1");
     if (showingModal && message != "" && message2 != "") {
       showingModal.showModal();
+      setprobList((prev) => [...prev, newProblem]);
     }
-    setprobList((prev) => [...prev, newProblem]);
   }
 
   return (

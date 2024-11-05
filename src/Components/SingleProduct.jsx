@@ -22,6 +22,9 @@ export default function SingleProduct() {
     setRating(newRating);
   };
 
+  const [heartDisabled, setheartDisabled] = useState(false)
+
+
   return (
     <>
       <div className="text-center bg-[#9538E2] pt-8 pb-32">
@@ -48,7 +51,7 @@ export default function SingleProduct() {
               {SingleProductData.product_title}
             </h1>
             <p className="text-[#09080F]/90 my-1 text-sm font-semibold">
-              Price: {SingleProductData.price}$
+              Price: ${SingleProductData.price}
             </p>
             <span
               className="text-[#309C08] font-normal text-xs p-1 px-3 rounded-full border 
@@ -111,10 +114,12 @@ export default function SingleProduct() {
               </button>
 
               <button
+                disabled={heartDisabled}
                 onClick={() => {
                   const isExist = addToWishlist.find(
                     (e) => e.product_id === SingleProductData.product_id
                   );
+                  setheartDisabled(true)
                   if (isExist) {
                     toast.warn("Alreay Added to wishlist!", {
                       position: "top-center",
@@ -142,8 +147,9 @@ export default function SingleProduct() {
                     });
                   }
                 }}
-                className="border border-black/15 p-2 
-                rounded-full hover:bg-[#9538E2] hover:text-white duration-300"
+                className={` ${heartDisabled ? 'bg-black/5 p-2 rounded-full text-black/20' : 
+                  'border border-black/35 p-2 rounded-full hover:bg-[#9538E2] hover:text-white duration-300'
+                }`}
               >
                 <FiHeart className="text-sm"></FiHeart>
               </button>

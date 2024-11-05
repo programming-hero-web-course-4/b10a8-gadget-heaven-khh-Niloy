@@ -16,9 +16,7 @@ export default function FeedBack() {
     if (showingModal && message != "" && message2 != "") {
       showingModal.showModal();
     }
-
     setprobList((prev) => [...prev, newProblem]);
-    // console.log(probList);
   }
 
   return (
@@ -42,7 +40,6 @@ export default function FeedBack() {
             id=""
             value={message}
             onChange={(e) => {
-              // handleOnChange(e)
               setmessage(e.target.value);
             }}
             cols="50"
@@ -55,7 +52,6 @@ export default function FeedBack() {
             id=""
             value={message2}
             onChange={(e) => {
-              // handleOnChange2(e)
               setmessage2(e.target.value);
             }}
             cols="30"
@@ -72,7 +68,7 @@ export default function FeedBack() {
       </div>
           
       <div className="w-[80%] mx-auto mt-14">
-        <h1 className="text-xl font-semibold mb-5">Problem List: </h1>
+        <h1 className="text-xl font-semibold mb-5">Problem List: {probList.length}</h1>
         <div className="grid grid-cols-1 gap-5">
           {
             probList.map((e)=>(

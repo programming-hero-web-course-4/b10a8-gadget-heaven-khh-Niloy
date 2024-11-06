@@ -14,9 +14,7 @@ export default function Dashboard() {
       <div className="text-center bg-[#9538E2] pt-8 pb-6">
         <h1 className="text-white font-semibold text-2xl">Dashboard</h1>
         <p className="text-white text-xs font-light leading-[1.5] my-3">
-          Explore the latest gadgets that will take your experience to the next
-          level. From smart devices to
-          <br /> the coolest accessories, we have it all!
+          Your Shopping Hub: Cart & Wishlist
         </p>
 
         <div className="flex items-center justify-center gap-4 mt-6">

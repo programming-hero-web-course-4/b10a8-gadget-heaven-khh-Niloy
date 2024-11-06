@@ -14,25 +14,28 @@ export default function SingleProduct() {
 
   const SingleProductData = data.find((e) => e.product_id === productId);
 
-  const { addToCart, setaddToCart, addToWishlist, setaddToWishlist, money, setmoney } =
-    useContext(UserContext);
+  const {
+    addToCart,
+    setaddToCart,
+    addToWishlist,
+    setaddToWishlist,
+    money,
+    setmoney,
+  } = useContext(UserContext);
 
   const [rating, setRating] = useState(SingleProductData.rating);
   const ratingChanged = (newRating) => {
     setRating(newRating);
   };
 
-  const [heartDisabled, setheartDisabled] = useState(false)
-
+  const [heartDisabled, setheartDisabled] = useState(false);
 
   return (
     <>
       <div className="text-center bg-[#9538E2] pt-8 pb-32">
         <h1 className="text-white font-semibold text-2xl">Product Details</h1>
         <p className="text-white text-xs font-light leading-[1.5] my-3">
-          Explore the latest gadgets that will take your experience to the next
-          level. From smart devices to <br /> the coolest accessories, we have
-          it all!
+          All You Need to Know About This Product
         </p>
       </div>
 
@@ -97,7 +100,7 @@ export default function SingleProduct() {
               <button
                 onClick={() => {
                   setaddToCart([...addToCart, SingleProductData]);
-                  setmoney(SingleProductData.price + money)
+                  setmoney(SingleProductData.price + money);
                   toast.success("Added to cart", {
                     position: "top-center",
                     autoClose: 2000,
@@ -121,7 +124,7 @@ export default function SingleProduct() {
                   const isExist = addToWishlist.find(
                     (e) => e.product_id === SingleProductData.product_id
                   );
-                  setheartDisabled(true)
+                  setheartDisabled(true);
                   if (isExist) {
                     toast.warn("Alreay Added to wishlist!", {
                       position: "top-center",
@@ -149,8 +152,10 @@ export default function SingleProduct() {
                     });
                   }
                 }}
-                className={` ${heartDisabled ? 'bg-black/5 p-2 rounded-full text-black/20' : 
-                  'border border-black/35 p-2 rounded-full hover:bg-[#9538E2] hover:text-white duration-300'
+                className={` ${
+                  heartDisabled
+                    ? "bg-black/5 p-2 rounded-full text-black/20"
+                    : "border border-black/35 p-2 rounded-full hover:bg-[#9538E2] hover:text-white duration-300"
                 }`}
               >
                 <FiHeart className="text-sm"></FiHeart>

@@ -4,11 +4,13 @@ Gadget Heaven is a user-friendly web application that showcases a curated select
 
 ## Live Demo
 
-[Netlify](https://tangerine-marigold-5f519d.netlify.app/)
+[Netlify](https://frolicking-cobbler-ba11bc.netlify.app/)
 
 ## Documentation
 
-[Requirement Document Link](https://github.com/programming-hero-web-course-4/b10a8-gadget-heaven-khh-Niloy/blob/main/ReqFile.pdf)
+- [Requirement Document Link (1)](https://github.com/ProgrammingHero1/B10-A8-gadget-heaven/blob/main/Batch-10_Assignment-08.pdf)
+
+- [Requirement Document Link (2)](https://github.com/programming-hero-web-course-4/b10a8-gadget-heaven-khh-Niloy/blob/main/ReqFile.pdf)
 
 ## React Fundamental Concepts Used
 

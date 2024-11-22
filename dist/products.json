@@ -18,7 +18,7 @@
   },
   {
     "product_id": "L002",
-    "product_title": "Apple MacBook Pro 14-inch",
+    "product_title": "Apple MacBook Pro",
     "product_image": "https://www.startech.com.bd/image/cache/catalog/laptop/apple/macbook-pro-m3/macbook-pro-m3-space-gray-01-500x500.webp",
     "category": "laptops",
     "price": 1999,
@@ -52,7 +52,7 @@
   },
   {
     "product_id": "L004",
-    "product_title": "Lenovo ThinkPad X1 Carbon Gen 10",
+    "product_title": "Lenovo ThinkPad X1",
     "product_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTR3lP75p983opQ5i5HYeLhWu6HI14QeMTX4Fqraf0IzHAt_YyvJfhwxc0qfkRY3kQ8Hw&usqp=CAU",
     "category": "laptops",
     "price": 1425,
@@ -86,7 +86,7 @@
   },
   {
     "product_id": "L006",
-    "product_title": "Microsoft Surface Laptop 4",
+    "product_title": "Microsoft Surface",
     "product_image": "https://www.startech.com.bd/image/cache/catalog/laptop/microsoft/surface-laptop-5/surface-laptop-5-matte-black-01-500x500.webp",
     "category": "laptops",
     "price": 1100,
@@ -171,7 +171,7 @@
   },
   {
     "product_id": "A001",
-    "product_title": "Apple AirPods Pro (2nd Generation)",
+    "product_title": "Apple AirPods Pro",
     "product_image": "https://gsmartbd.com/cdn/shop/files/airpods-pro-2nd-generation-02-500x500_8758db45-fcf6-43eb-9992-14fccd8b065c.webp?v=1698492729",
     "category": "accessories",
     "price": 249,
@@ -188,7 +188,7 @@
   },
   {
     "product_id": "A001",
-    "product_title": "Apple AirPods Pro (2nd Generation)",
+    "product_title": "Apple AirPods",
     "product_image": "https://executiveample.com/wp-content/uploads/2023/11/Apple-AirPods-Pro-2nd-generation-with-MagSafe-Charging-Case-USB%E2%80%91C4.webp",
     "category": "accessories",
     "price": 249,
@@ -222,7 +222,7 @@
   },
   {
     "product_id": "A003",
-    "product_title": "Samsung Galaxy Buds 2 Pro",
+    "product_title": "Samsung Galaxy Buds 2",
     "product_image": "https://brotherselectronicsbd.com/image/cache/catalog/demo/Accessories/Earphone/Samsung/Buds%202%20Pro/Galaxy%20Buds%202%20Pro%20(4)-800x800.jpg",
     "category": "accessories",
     "price": 229,
@@ -274,7 +274,7 @@
   },
   {
     "product_id": "SW002",
-    "product_title": "Samsung Galaxy Watch 5 Pro",
+    "product_title": "Samsung Galaxy Watch 5",
     "product_image": "https://brotherselectronicsbd.com/image/cache/catalog/demo/Smart%20Watch/Samsung/Watch%205%20Pro/Galaxy%20Watch5%20Pro%20(4)-800x800.jpg",
     "category": "smart-watches",
     "price": 449,
@@ -429,7 +429,7 @@
   },
   {
     "product_id": "IP003",
-    "product_title": "iPhone SE (3rd Generation)",
+    "product_title": "iPhone SE",
     "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/5020-41819.jpg",
     "category": "iphone",
     "price": 429,

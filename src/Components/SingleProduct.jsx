@@ -39,9 +39,9 @@ export default function SingleProduct() {
         </p>
       </div>
 
-      <div className="flex flex-col items-center justify-center py-44 bg-[#f6f6f6] relative">
-        <div className="absolute bg-white p-4 rounded-xl flex -top-28 w-[80%] gap-5">
-          <div className="w-[36%]">
+      <div className="flex flex-col items-center justify-center py-44 lg:pb-44 pb-[34rem] bg-[#f6f6f6] relative">
+        <div className="absolute bg-white p-4 rounded-xl flex flex-col lg:flex-row -top-28 w-[80%] gap-5">
+          <div className="lg:w-[36%]">
             <img
               src={SingleProductData.product_image}
               className="border border-black/10 rounded-xl object-cover w-full hover:scale-105 hover:transition"
@@ -49,7 +49,7 @@ export default function SingleProduct() {
             />
           </div>
 
-          <div className="w-[60%]">
+          <div className="lg:w-[60%]">
             <h1 className="text-lg font-semibold">
               {SingleProductData.product_title}
             </h1>

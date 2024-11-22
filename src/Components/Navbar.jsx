@@ -10,6 +10,29 @@ export default function Navbar() {
   const { addToWishlist, setaddToWishlist, addToCart, setaddToCart } =
     useContext(UserContext);
 
+  const location = [
+    "/dashboard",
+    "/stats",
+    "/feedback",
+    "/p/L001",
+    "/p/L002",
+    "/p/L003",
+    "/p/L004",
+    "/p/L005",
+    "/p/L006",
+    "/p/L007",
+    "/p/P001",
+    "/p/P003",
+    "/p/P004",
+    "/p/A001",
+    "/p/A001",
+    "/p/A002",
+    "/p/A003",
+    "/p/A004",
+    "/p/SW001",
+    "/p/SW002",
+  ];
+
   return (
     <>
       <div
@@ -42,20 +65,18 @@ export default function Navbar() {
               : "bg-white"
           }`}
         >
-          <div className="navbar w-[85%] mx-auto">
+          <div className="navbar lg:w-[85%] w-[95%] mx-auto">
             <div className="navbar-start">
               <div className="dropdown">
-                <div
-                  tabIndex={0}
-                  role="button"
-                  className="btn btn-ghost lg:hidden"
-                >
+                <div tabIndex={0} role="button" className="lg:hidden mr-6">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke="currentColor"
+                    stroke={`${
+                      location.includes(pathname) ? "black" : "white"
+                    }`}
                   >
                     <path
                       strokeLinecap="round"
@@ -67,7 +88,13 @@ export default function Navbar() {
                 </div>
                 <ul
                   tabIndex={0}
-                  className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                  className={`menu menu-sm dropdown-content ${
+                    pathname === "/dashboard" ||
+                    pathname === "/stats" ||
+                    pathname === "/feedback"
+                      ? "bg-[#9538E2] shadow-2xl"
+                      : "bg-base-100"
+                  } rounded-box z-[1] mt-3 w-52 p-2 shadow-2xl`}
                 >
                   <li>
                     <NavLink
@@ -75,6 +102,7 @@ export default function Navbar() {
                         `${
                           isActive ? "underline font-semibold" : "font-light"
                         } ${
+                          location.includes(pathname) ||
                           pathname === "/" ||
                           pathname === "/home/all-product" ||
                           pathname === "/home/laptops" ||
@@ -84,8 +112,8 @@ export default function Navbar() {
                           pathname === "/home/macbook" ||
                           pathname === "/home/iphone" ||
                           pathname === "/home/tablets"
-                            ? "text-white"
-                            : "text-black"
+                            ? "text-black"
+                            : "text-white"
                         }`
                       }
                       to="/"
@@ -99,6 +127,7 @@ export default function Navbar() {
                         `${
                           isActive ? "underline font-semibold" : "font-light"
                         } ${
+                          location.includes(pathname) ||
                           pathname === "/" ||
                           pathname === "/home/all-product" ||
                           pathname === "/home/laptops" ||
@@ -108,8 +137,8 @@ export default function Navbar() {
                           pathname === "/home/macbook" ||
                           pathname === "/home/iphone" ||
                           pathname === "/home/tablets"
-                            ? "text-white"
-                            : "text-black"
+                            ? "text-black"
+                            : "text-white"
                         }`
                       }
                       to="/dashboard"
@@ -123,6 +152,7 @@ export default function Navbar() {
                         `${
                           isActive ? "underline font-semibold" : "font-light"
                         } ${
+                          location.includes(pathname) ||
                           pathname === "/" ||
                           pathname === "/home/all-product" ||
                           pathname === "/home/laptops" ||
@@ -132,8 +162,8 @@ export default function Navbar() {
                           pathname === "/home/macbook" ||
                           pathname === "/home/iphone" ||
                           pathname === "/home/tablets"
-                            ? "text-white"
-                            : "text-black"
+                            ? "text-black"
+                            : "text-white"
                         }`
                       }
                       to="/stats"
@@ -147,6 +177,7 @@ export default function Navbar() {
                         `${
                           isActive ? "underline font-semibold" : "font-light"
                         } ${
+                          location.includes(pathname) ||
                           pathname === "/" ||
                           pathname === "/home/all-product" ||
                           pathname === "/home/laptops" ||
@@ -156,8 +187,8 @@ export default function Navbar() {
                           pathname === "/home/macbook" ||
                           pathname === "/home/iphone" ||
                           pathname === "/home/tablets"
-                            ? "text-white"
-                            : "text-black"
+                            ? "text-black"
+                            : "text-white"
                         }`
                       }
                       to="/feedback"

@@ -184,312 +184,326 @@ export default function Statistics() {
         </p>
       </div>
 
-      <div className="w-[70%] py-20 mx-auto grid grid-cols-1 gap-10">
-        <div className="border border-black/20 p-4 rounded-2xl ">
-          <h1 className="ml-3 mb-5 font-semibold">Laptop</h1>
-          <ComposedChart
-            width={800}
-            height={250}
-            data={chartLaptop}
-            margin={{
-              top: 20,
-              right: 80,
-              bottom: 45,
-              left: 20,
-            }}
-          >
-            <XAxis
-              dataKey="name"
-              label={{
-                value: "Product Name",
-                position: "insideBottomRight",
-                offset: 0,
-                style: {
-                  fontSize: "10px",
-                },
-              }}
-              tick={{ fontSize: 10 }}
-              angle={-15}
-              textAnchor="end"
-              scale="band"
-              dy={10}
-            />
-            <YAxis
-              label={{
-                value: "Price",
-                angle: -90,
-                position: "insideLeft",
-                style: {
-                  fontSize: "10px",
-                },
-              }}
-              style={{ fontSize: 10 }}
-            />
-            <Tooltip />
-            <Area
-              type="monotone"
-              dataKey="price"
-              fill="rgba(149, 56, 226, 0.30)"
-              stroke="#8884d8"
-            />
-            <Bar dataKey="price" barSize={20} fill="#9538E2" />
-          </ComposedChart>
-        </div>
+      {
+        <div className="lg:w-[70%] w-[90%] py-20 mx-auto grid grid-cols-1 gap-10">
+          <div className="border border-black/20 p-4 rounded-2xl">
+            <h1 className="ml-3 mb-5 font-semibold">Laptop</h1>
+            <ResponsiveContainer width="100%" height={250}>
+              <ComposedChart
+                width={800}
+                height={250}
+                data={chartLaptop}
+                margin={{
+                  top: 20,
+                  right: 80,
+                  bottom: 45,
+                  left: 20,
+                }}
+              >
+                <XAxis
+                  dataKey="name"
+                  label={{
+                    value: "Product Name",
+                    position: "insideBottomRight",
+                    offset: 0,
+                    style: {
+                      fontSize: "10px",
+                    },
+                  }}
+                  tick={{ fontSize: 10 }}
+                  angle={-15}
+                  textAnchor="end"
+                  scale="band"
+                  dy={10}
+                />
+                <YAxis
+                  label={{
+                    value: "Price",
+                    angle: -90,
+                    position: "insideLeft",
+                    style: {
+                      fontSize: "10px",
+                    },
+                  }}
+                  style={{ fontSize: 10 }}
+                />
+                <Tooltip />
+                <Area
+                  type="monotone"
+                  dataKey="price"
+                  fill="rgba(149, 56, 226, 0.30)"
+                  stroke="#8884d8"
+                />
+                <Bar dataKey="price" barSize={20} fill="#9538E2" />
+              </ComposedChart>
+            </ResponsiveContainer>
+          </div>
 
-        <div className="border border-black/20 p-4 rounded-2xl ">
-          <h1 className="ml-3 mb-5 font-semibold">Phones</h1>
-          <ComposedChart
-            width={800}
-            height={250}
-            data={chartPhones}
-            margin={{
-              top: 20,
-              right: 80,
-              bottom: 45,
-              left: 20,
-            }}
-          >
-            <XAxis
-              dataKey="name"
-              label={{
-                value: "Product Name",
-                position: "insideBottomRight",
-                offset: 0,
-                style: {
-                  fontSize: "10px",
-                },
-              }}
-              tick={{ fontSize: 10 }}
-              textAnchor="middle"
-              scale="band"
-              dy={10}
-            />
-            <YAxis
-              label={{
-                value: "Price",
-                angle: -90,
-                position: "insideLeft",
-                style: {
-                  fontSize: "10px",
-                },
-              }}
-              style={{ fontSize: 10 }}
-            />
-            <Tooltip />
-            <Area
-              type="monotone"
-              dataKey="price"
-              fill="rgba(149, 56, 226, 0.30)"
-              stroke="#8884d8"
-            />
-            <Bar dataKey="price" barSize={20} fill="#9538E2" />
-          </ComposedChart>
-        </div>
+          <div className="border border-black/20 p-4 rounded-2xl ">
+            <h1 className="ml-3 mb-5 font-semibold">Phones</h1>
+            <ResponsiveContainer width="100%" height={250}>
+              <ComposedChart
+                width={800}
+                height={250}
+                data={chartPhones}
+                margin={{
+                  top: 20,
+                  right: 80,
+                  bottom: 45,
+                  left: 20,
+                }}
+              >
+                <XAxis
+                  dataKey="name"
+                  label={{
+                    value: "Product Name",
+                    position: "insideBottomRight",
+                    offset: 0,
+                    style: {
+                      fontSize: "10px",
+                    },
+                  }}
+                  tick={{ fontSize: 10 }}
+                  textAnchor="middle"
+                  scale="band"
+                  dy={10}
+                />
+                <YAxis
+                  label={{
+                    value: "Price",
+                    angle: -90,
+                    position: "insideLeft",
+                    style: {
+                      fontSize: "10px",
+                    },
+                  }}
+                  style={{ fontSize: 10 }}
+                />
+                <Tooltip />
+                <Area
+                  type="monotone"
+                  dataKey="price"
+                  fill="rgba(149, 56, 226, 0.30)"
+                  stroke="#8884d8"
+                />
+                <Bar dataKey="price" barSize={20} fill="#9538E2" />
+              </ComposedChart>
+            </ResponsiveContainer>
+          </div>
 
-        <div className="border border-black/20 p-4 rounded-2xl ">
-          <h1 className="ml-3 mb-5 font-semibold">Accessories</h1>
-          <ComposedChart
-            width={800}
-            height={250}
-            data={chartaccessories}
-            margin={{
-              top: 20,
-              right: 80,
-              bottom: 45,
-              left: 20,
-            }}
-          >
-            <XAxis
-              dataKey="name"
-              label={{
-                value: "Product Name",
-                position: "insideBottomRight",
-                offset: 0,
-                style: {
-                  fontSize: "10px",
-                },
-              }}
-              tick={{ fontSize: 10 }}
-              angle={-15}
-              textAnchor="middle"
-              scale="band"
-              dy={10}
-            />
-            <YAxis
-              label={{
-                value: "Price",
-                angle: -90,
-                position: "insideLeft",
-                style: {
-                  fontSize: "10px",
-                },
-              }}
-              style={{ fontSize: 10 }}
-            />
-            <Tooltip />
-            <Area
-              type="monotone"
-              dataKey="price"
-              fill="rgba(149, 56, 226, 0.30)"
-              stroke="#8884d8"
-            />
-            <Bar dataKey="price" barSize={20} fill="#9538E2" />
-          </ComposedChart>
-        </div>
+          <div className="border border-black/20 p-4 rounded-2xl ">
+            <h1 className="ml-3 mb-5 font-semibold">Accessories</h1>
+            <ResponsiveContainer width="100%" height={250}>
+              <ComposedChart
+                width={800}
+                height={250}
+                data={chartaccessories}
+                margin={{
+                  top: 20,
+                  right: 80,
+                  bottom: 45,
+                  left: 20,
+                }}
+              >
+                <XAxis
+                  dataKey="name"
+                  label={{
+                    value: "Product Name",
+                    position: "insideBottomRight",
+                    offset: 0,
+                    style: {
+                      fontSize: "10px",
+                    },
+                  }}
+                  tick={{ fontSize: 10 }}
+                  angle={-15}
+                  textAnchor="middle"
+                  scale="band"
+                  dy={10}
+                />
+                <YAxis
+                  label={{
+                    value: "Price",
+                    angle: -90,
+                    position: "insideLeft",
+                    style: {
+                      fontSize: "10px",
+                    },
+                  }}
+                  style={{ fontSize: 10 }}
+                />
+                <Tooltip />
+                <Area
+                  type="monotone"
+                  dataKey="price"
+                  fill="rgba(149, 56, 226, 0.30)"
+                  stroke="#8884d8"
+                />
+                <Bar dataKey="price" barSize={20} fill="#9538E2" />
+              </ComposedChart>
+            </ResponsiveContainer>
+          </div>
 
-        <div className="border border-black/20 p-4 rounded-2xl ">
-          <h1 className="ml-3 mb-5 font-semibold">Smart Watches</h1>
-          <ComposedChart
-            width={800}
-            height={250}
-            data={chartsmartWatches}
-            margin={{
-              top: 20,
-              right: 80,
-              bottom: 45,
-              left: 20,
-            }}
-          >
-            <XAxis
-              dataKey="name"
-              label={{
-                value: "Product Name",
-                position: "insideBottomRight",
-                offset: 0,
-                style: {
-                  fontSize: "10px",
-                },
-              }}
-              tick={{ fontSize: 10 }}
-              angle={-15}
-              textAnchor="middle"
-              scale="band"
-              dy={10}
-            />
-            <YAxis
-              label={{
-                value: "Price",
-                angle: -90,
-                position: "insideLeft",
-                style: {
-                  fontSize: "10px",
-                },
-              }}
-              style={{ fontSize: 10 }}
-            />
-            <Tooltip />
-            <Area
-              type="monotone"
-              dataKey="price"
-              fill="rgba(149, 56, 226, 0.30)"
-              stroke="#8884d8"
-            />
-            <Bar dataKey="price" barSize={20} fill="#9538E2" />
-          </ComposedChart>
-        </div>
+          <div className="border border-black/20 p-4 rounded-2xl ">
+            <h1 className="ml-3 mb-5 font-semibold">Smart Watches</h1>
+            <ResponsiveContainer width="100%" height={250}>
+              <ComposedChart
+                width={800}
+                height={250}
+                data={chartsmartWatches}
+                margin={{
+                  top: 20,
+                  right: 80,
+                  bottom: 45,
+                  left: 20,
+                }}
+              >
+                <XAxis
+                  dataKey="name"
+                  label={{
+                    value: "Product Name",
+                    position: "insideBottomRight",
+                    offset: 0,
+                    style: {
+                      fontSize: "10px",
+                    },
+                  }}
+                  tick={{ fontSize: 10 }}
+                  angle={-15}
+                  textAnchor="middle"
+                  scale="band"
+                  dy={10}
+                />
+                <YAxis
+                  label={{
+                    value: "Price",
+                    angle: -90,
+                    position: "insideLeft",
+                    style: {
+                      fontSize: "10px",
+                    },
+                  }}
+                  style={{ fontSize: 10 }}
+                />
+                <Tooltip />
+                <Area
+                  type="monotone"
+                  dataKey="price"
+                  fill="rgba(149, 56, 226, 0.30)"
+                  stroke="#8884d8"
+                />
+                <Bar dataKey="price" barSize={20} fill="#9538E2" />
+              </ComposedChart>
+            </ResponsiveContainer>
+          </div>
 
-        <div className="border border-black/20 p-4 rounded-2xl ">
-          <h1 className="ml-3 mb-5 font-semibold">Macbook</h1>
-          <ComposedChart
-            width={800}
-            height={250}
-            data={chartmacbook}
-            margin={{
-              top: 20,
-              right: 80,
-              bottom: 45,
-              left: 20,
-            }}
-          >
-            <XAxis
-              dataKey="name"
-              label={{
-                value: "Product Name",
-                position: "insideBottomRight",
-                offset: 0,
-                style: {
-                  fontSize: "10px",
-                },
-              }}
-              tick={{ fontSize: 10 }}
-              angle={-15}
-              textAnchor="middle"
-              scale="band"
-              dy={10}
-            />
-            <YAxis
-              label={{
-                value: "Price",
-                angle: -90,
-                position: "insideLeft",
-                style: {
-                  fontSize: "10px",
-                },
-              }}
-              style={{ fontSize: 10 }}
-            />
-            <Tooltip />
-            <Area
-              type="monotone"
-              dataKey="price"
-              fill="rgba(149, 56, 226, 0.30)"
-              stroke="#8884d8"
-            />
-            <Bar dataKey="price" barSize={20} fill="#9538E2" />
-          </ComposedChart>
-        </div>
+          <div className="border border-black/20 p-4 rounded-2xl ">
+            <h1 className="ml-3 mb-5 font-semibold">Macbook</h1>
+            <ResponsiveContainer width="100%" height={250}>
+              <ComposedChart
+                width={800}
+                height={250}
+                data={chartmacbook}
+                margin={{
+                  top: 20,
+                  right: 80,
+                  bottom: 45,
+                  left: 20,
+                }}
+              >
+                <XAxis
+                  dataKey="name"
+                  label={{
+                    value: "Product Name",
+                    position: "insideBottomRight",
+                    offset: 0,
+                    style: {
+                      fontSize: "10px",
+                    },
+                  }}
+                  tick={{ fontSize: 10 }}
+                  angle={-15}
+                  textAnchor="middle"
+                  scale="band"
+                  dy={10}
+                />
+                <YAxis
+                  label={{
+                    value: "Price",
+                    angle: -90,
+                    position: "insideLeft",
+                    style: {
+                      fontSize: "10px",
+                    },
+                  }}
+                  style={{ fontSize: 10 }}
+                />
+                <Tooltip />
+                <Area
+                  type="monotone"
+                  dataKey="price"
+                  fill="rgba(149, 56, 226, 0.30)"
+                  stroke="#8884d8"
+                />
+                <Bar dataKey="price" barSize={20} fill="#9538E2" />
+              </ComposedChart>
+            </ResponsiveContainer>
+          </div>
 
-        <div className="border border-black/20 p-4 rounded-2xl ">
-          <h1 className="ml-3 mb-5 font-semibold">iphone</h1>
-          <ComposedChart
-            width={800}
-            height={250}
-            data={chartiphone}
-            margin={{
-              top: 20,
-              right: 80,
-              bottom: 45,
-              left: 20,
-            }}
-          >
-            <XAxis
-              dataKey="name"
-              label={{
-                value: "Product Name",
-                position: "insideBottomRight",
-                offset: 0,
-                style: {
-                  fontSize: "10px",
-                },
-              }}
-              tick={{ fontSize: 10 }}
-              angle={-15}
-              textAnchor="middle"
-              scale="band"
-              dy={10}
-            />
-            <YAxis
-              label={{
-                value: "Price",
-                angle: -90,
-                position: "insideLeft",
-                style: {
-                  fontSize: "10px",
-                },
-              }}
-              style={{ fontSize: 10 }}
-            />
-            <Tooltip />
-            <Area
-              type="monotone"
-              dataKey="price"
-              fill="rgba(149, 56, 226, 0.30)"
-              stroke="#8884d8"
-            />
-            <Bar dataKey="price" barSize={20} fill="#9538E2" />
-          </ComposedChart>
+          <div className="border border-black/20 p-4 rounded-2xl ">
+            <h1 className="ml-3 mb-5 font-semibold">iphone</h1>
+            <ResponsiveContainer width="100%" height={250}>
+              <ComposedChart
+                width={800}
+                height={250}
+                data={chartiphone}
+                margin={{
+                  top: 20,
+                  right: 80,
+                  bottom: 45,
+                  left: 20,
+                }}
+              >
+                <XAxis
+                  dataKey="name"
+                  label={{
+                    value: "Product Name",
+                    position: "insideBottomRight",
+                    offset: 0,
+                    style: {
+                      fontSize: "10px",
+                    },
+                  }}
+                  tick={{ fontSize: 10 }}
+                  angle={-15}
+                  textAnchor="middle"
+                  scale="band"
+                  dy={10}
+                />
+                <YAxis
+                  label={{
+                    value: "Price",
+                    angle: -90,
+                    position: "insideLeft",
+                    style: {
+                      fontSize: "10px",
+                    },
+                  }}
+                  style={{ fontSize: 10 }}
+                />
+                <Tooltip />
+                <Area
+                  type="monotone"
+                  dataKey="price"
+                  fill="rgba(149, 56, 226, 0.30)"
+                  stroke="#8884d8"
+                />
+                <Bar dataKey="price" barSize={20} fill="#9538E2" />
+              </ComposedChart>
+            </ResponsiveContainer>
+          </div>
         </div>
-      </div>
+      }
     </>
   );
 }

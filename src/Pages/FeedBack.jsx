@@ -35,15 +35,14 @@ export default function FeedBack() {
         <div className="bg-[#f6f6f6] p-5 rounded-2xl text-black font-semibold py-5">
           <h1 className="text-lg">Problem type:</h1>
           <textarea
-            className="resize-none p-1 text-black font-normal border border-black/10 rounded-md focus:outline-none my-2"
+            className="resize-none p-1 text-black font-normal w-full lg:h-[2.2rem] h-[2.5rem]
+            border border-black/10 rounded-md focus:outline-none my-2"
             name=""
             id=""
             value={message}
             onChange={(e) => {
               setmessage(e.target.value);
             }}
-            cols="50"
-            rows="1"
           ></textarea>
           <h1 className="text-lg">Describe your problem:</h1>
           <textarea
@@ -66,22 +65,27 @@ export default function FeedBack() {
           </button>
         </div>
       </div>
-          
-      <div className="w-[80%] mx-auto mt-14">
-        <h1 className="text-xl font-semibold mb-5">Problem List: {probList.length}</h1>
+
+      <div className="w-[80%] mx-auto mt-14 lg:mb-0 mb-24">
+        <h1 className="text-xl font-semibold mb-5">
+          Problem List: {probList.length}
+        </h1>
         <div className="grid grid-cols-1 gap-5">
-          {
-            probList.map((e)=>(
-              <div className="border border-black/10 p-3 rounded-xl">
-                <h1><span className="font-semibold">Problem type: </span>{e.type}</h1>
-                <p className="my-2"><span className="font-semibold">Detailes: </span>:{e.detailes}</p>
-              </div>
-            ))
-          }
+          {probList.map((e) => (
+            <div className="border border-black/10 p-3 rounded-xl">
+              <h1>
+                <span className="font-semibold">Problem type: </span>
+                {e.type}
+              </h1>
+              <p className="my-2">
+                <span className="font-semibold">Detailes: </span>:{e.detailes}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
 
-      <dialog id="my_modal_1" className="modal">
+      <dialog id="my_modal_1" className="modal w-full">
         <div className="modal-box flex flex-col items-center justify-center">
           <h3 className="font-bold text-xl mt-3">Your feedback matters!</h3>
           <div className="border border-black/5 w-[90%] my-3"></div>

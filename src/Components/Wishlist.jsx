@@ -12,12 +12,12 @@ export default function Wishlist() {
   return (
     <>
       <div className="bg-[#f6f6f6] border">
-        <div className="w-[80%] mx-auto mt-10 ">
+        <div className="lg:w-[80%] w-[90%] mx-auto mt-10 ">
           <h1 className="font-bold text-xl">WishList</h1>
           <div className="grid grid-cols-1 gap-5 mt-8 pb-32">
             {addToWishlist.map((e) => (
-              <div className="flex items-center justify-start gap-12 py-2 rounded-2xl bg-white">
-                <div className="w-[17%]">
+              <div className="flex items-center justify-start gap-12 lg:py-2 py-5 rounded-2xl bg-white">
+                <div className="lg:w-[17%] w-[45%]">
                   <img
                     src={e.product_image}
                     className="w-full rounded-2xl ml-5"
@@ -28,13 +28,10 @@ export default function Wishlist() {
                 <div className="flex justify-between w-full">
                   <div className="flex flex-col gap-1.5">
                     <h1 className="text-md font-semibold">{e.product_title}</h1>
-                    <p className="text-[#09080F]/60 text-sm">
-                      <span className="font-semibold text-black text-sm">
-                        Description:
-                      </span>{" "}
+                    <p className="text-[#09080F]/60 lg:text-sm text-xs">
                       {e.description}
                     </p>
-                    <h1 className="text-sm font-semibold">Price: ${e.price}</h1>
+                    <h1 className="lg:text-sm font-semibold text-xs">Price: ${e.price}</h1>
                     <div>
                       <button
                         onClick={() => {
@@ -67,7 +64,7 @@ export default function Wishlist() {
                     }}
                   >
                     <RxCross2
-                      className="mr-10 border border-[red] text-[red] text-2xl p-1 rounded-full
+                      className="lg:mr-10 mr-4 border border-[red] text-[red] text-2xl p-1 rounded-full
                      hover:bg-red-600 hover:text-white hover:border-none cursor-pointer"
                     ></RxCross2>
                   </div>

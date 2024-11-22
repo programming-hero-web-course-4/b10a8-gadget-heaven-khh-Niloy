@@ -21,14 +21,14 @@ export default function Home() {
         <div className="mx-auto">
           <Hero></Hero>
 
-          <div className="w-[80%] mx-auto pt-20 pb-32">
-            <h1 className="text-3xl font-semibold text-center pb-14">
+          <div className="lg:w-[80%] w-[90%] mx-auto pt-20 pb-32">
+            <h1 className="text-3xl font-semibold text-center lg:pb-14 pb-10">
               Explore Cutting-Edge Gadgets
             </h1>
 
-            <div className="grid grid-cols-12 gap-5">
-              <div className="col-span-3">
-                <div className="flex flex-col bg-white p-5 gap-5 rounded-xl border border-black/10">
+            <div className="grid lg:grid-cols-12 grid-cols-2 lg:gap-5 gap-3">
+              <div className="lg:col-span-3 col-span-2">
+                <div className="lg:flex lg:flex-col grid grid-cols-2 bg-white p-5 gap-5 rounded-xl border border-black/10">
                   {CategoryData.map((e, index) => (
                     <NavLink
                       to={`/home/${e.slug}`}
@@ -47,7 +47,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="col-span-9">
+              <div className="lg:col-span-9 col-span-2">
                 <Outlet></Outlet>
               </div>
             </div>
